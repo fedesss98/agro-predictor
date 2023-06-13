@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <!-- FontAwesome 5 -->
+        <script src="https://kit.fontawesome.com/f776e72a03.js" crossorigin="anonymous"></script>
+        <!-- Styles -->
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <title>{% block title %}{% endblock %}</title>
+    </head>
+    <body>
+        <header class="container--flex header">
+            <h1><a href="/" class="site-title">Agr<i class="fa-solid fa-lemon fa-2xs" style="color: #f0b514;"></i>
+                Predict<i class="fa-solid fa-lemon fa-rotate-90 fa-2xs" style="color: #f0b514;"></i>r</a></h1>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/predict">Predict</a></li>
+                    <li><a href="/models">Models</a></li>
+                    <li><a href="https://github.com/fedesss98/ml-to-eta-of-citrus-orchards"
+                           target="_blank"
+                           class="btn btn--small btn--secondary">GitHub &ensp;<i class="fa-solid fa-up-right-from-square"></i></a></li>
+                </ul>
+            </nav>
+        </header>
+
+        {% block content %}
+        {% endblock %}
+
+        <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+    </body>
+</html>

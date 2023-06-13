@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block content %}
+
+    <h1>Agro Predictor</h1>
+    <h2>A Web Application based on the work:</h2>
+    <div class="container paper">
+        <h2 class="paper-title">Machine Learning Models to Predict Daily Actual
+        Evapotranspiration of Citrus Orchards Under Regulated Deficit Irrigation</h2>
+        <h2>by</h2>
+        <h2 class="paper-title">Antonino Pagano, Federico Amato, Matteo Ippolito, Dario De Caro, Daniele Croce, Antonio Motisi, Giuseppe Provenzano, Ilenia Tinnirello</h2>
+        <p><strong>Abstract</strong></p>
+        <p>Precise estimations of actual evapotranspiration (<em>ET<sub>a</sub></em>) are essential for various
+            environmental issues, including those related to agricultural ecosystem sustainability and water management.
+            Indeed, the increasing demands of agricultural production, coupled with increasingly frequent drought events
+            in many parts of the world, necessitate a more careful evaluation of crop water requirements.</p>
+        <p>Artificial Intelligence-based models represent a promising alternative to the most common measurement
+            techniques (e.g. using expensive Eddy Covariance (EC) towers). In this context, the main challenges are
+            choosing the best possible model and selecting the most representative features. The objective of this
+            research is to evaluate two different machine learning algorithms, namely Multi-Layer Perceptron (MLP) and
+            Random Forest (RF), to predict daily actual evapotranspiration (<em>ET<sub>a</sub></em>) in a citrus orchard
+            typical of the Mediterranean ecosystem using different feature combinations. With many features available
+            coming from various infield sensors, a thorough analysis was performed to measure feature importance,
+            scatter matrix observations, and Pearson's correlation coefficient calculation, which resulted in the
+            selection of 12 promising feature combinations. The models were calibrated under regulated deficit
+            irrigation (RDI) conditions to estimate <em>ET<sub>a</sub></em> and save irrigation water. On average up to
+            38.5% water savings were obtained, compared to full irrigation.</p>
+        <p>Moreover, among the different input variables adopted, the soil water content (SWC) feature appears to have a
+            prominent role in the prediction of <em>ET<sub>a</sub></em>. Indeed, the presented results show that by
+            choosing the appropriate input features, the accuracy of the proposed machine learning models remains
+            acceptable even when the number of features is reduced to only 4. The best performance was achieved by the
+            Random Forest method, with seven input features, obtaining a root mean square error (RMSE) and a coefficient
+            of determination (<em>R<sup>2</sup></em>) of 0.39 mm/day and 0.84, respectively.</p>
+        <p>Finally, the results show that the joint use of SWC, weather and satellite data significantly improves the
+            performance of evapotranspiration forecasts compared to models using only meteorological variables.</p>
+    </div>
+
+    <div class="container hero">
+        <p class="lead">Now make your measures and</p>
+        <a class="btn" href="/predict">Predict Evapotranspiration</a>
+    </div>
+{% endblock %}

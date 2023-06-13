@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Agro Predictor
+{% endblock %}
+
+{% block content %}
+    <div class="container m-5">
+        <h1>Evapotranspiration ML Predictions</h1>
+        <div class="container left-align form-selector my-5">
+            <label for="model">First select the model you want to use:</label>
+            <select id="model" name="model">
+                <option value="model1">Model 1</option>
+                <option value="model2">Model 2</option>
+                <option value="model3">Model 3</option>
+                <option value="model4">Model 4</option>
+                <option value="model8">Model 8</option>
+                <option value="model9">Model 9</option>
+                <option value="model12">Model 12</option>
+            </select>
+        </div>
+        <form action="/predict" method="post">
+
+            <!-- Javascript generated fields will overwrite this -->
+            <p class="lead">Insert here your data to have the Evapotranspiration predicted by our best model.</p>
+            <!-- Solar Radiation -->
+            <label for="solar_radiation">Solar Radiation:</label>
+            <div class="input-group">
+                <input type="text" id="solar_radiation" name="solar_radiation">
+                <span class="input-unit">MJ/m²d</span>
+            </div>
+            <!-- Wind Speed -->
+            <label for="wind_speed">Wind Speed:</label>
+            <span class="help-text">Enter the Wind Speed at 2 meters height in m/s</span>
+            <div class="input-group">
+                <input type="text" id="wind_speed" name="wind_speed"><br><br>
+                <span class="input-unit">m/s</span>
+            </div>
+            <!-- Max Relative Humidity -->
+            <label for="max_relative_humidity">Maximum Relative Humidity:</label>
+            <div class="input-group">
+                <input type="text" id="max_relative_humidity" name="max_relative_humidity"><br><br>
+                <span class="input-unit">%</span>
+            </div>
+            <!-- Min Relative Humidity -->
+            <label for="min_relative_humidity">Minimum Relative Humidity:</label>
+            <div class="input-group">
+                <input type="text" id="min_relative_humidity" name="min_relative_humidity"><br><br>
+                <span class="input-unit">%</span>
+            </div>
+            <!-- Max Temperature -->
+            <label for="max_temperature">Maximum Temperature:</label>
+            <div class="input-group">
+                <input type="text" id="max_temperature" name="max_temperature"><br><br>
+                <span class="input-unit">°C</span>
+            </div>
+            <!-- Min Temperature -->
+            <label for="min_temperature">Minimum Temperature:</label>
+            <div class="input-group">
+                <input type="text" id="min_temperature" name="min_temperature"><br><br>
+                <span class="input-unit">°C</span>
+            </div>
+            <!-- Soil Water Content -->
+            <label for="soil_water_content">Soil Water Content:</label>
+            <div class="input-group">
+                <input type="text" id="soil_water_content" name="soil_water_content"><br><br>
+                <span class="input-unit">cm²/cm²</span>
+            </div>
+            <!-- NDVI -->
+            <label for="ndvi">NDVI:</label>
+            <span class="help-text">Enter the Normalized Difference Vegetation Index</span>
+            <div class="input-group">
+                <input type="text" id="ndvi" name="ndvi"><br><br>
+            </div>
+            <!-- NDWI -->
+            <label for="ndwi">NDWI:</label>
+            <span class="help-text">Enter the Normalized Difference Water Index</span>
+            <div class="input-group">
+                <input type="text" id="ndwi" name="ndwi"><br><br>
+            </div>
+            <!-- Day of the Year -->
+            <label for="day_of_year">Day of the Year:</label>
+            <span class="help-text">Enter the ordinal number of the day from 1 to 366</span>
+            <div class="input-group">
+                <input type="text" id="day_of_year" name="day_of_year"><br><br>
+                <span class="input-unit">/366</span>
+            </div>
+            <input class="btn center my-5" type="submit" value="Submit">
+        </form>
+        <div class="predictions">
+            {% if prediction %}
+                <h2>Prediction: {{ prediction }}</h2>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

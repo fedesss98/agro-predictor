@@ -1,0 +1,126 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    ML Models
+{% endblock %}
+
+{% block content %}
+    <!--
+        MOST INTERESTING MODELS:
+        Model 1: all variables except for ETo
+        Model 2: Rs, U2, RHmax, Tmin, Tmax, SWC, NDVI, NDWI, DOY
+        Model 3: Rs, U2, RHmax, Tmax, SWC, NDVI, NDWI, DOY
+        Model 4: Rs, U2, RHmax, Tmax, SWC, NDWI, DOY
+        Model 8: only variables from weather station
+        Model 9: do not use weather variables, but consider ETo, the most important feature overall
+        Model 12: do not use weather variables, but consider Rs, the most important weather variable
+     -->
+    <div class="container">
+        <h1>Developed Models</h1>
+        <h2>Here is the list of trained models you can use to predict ETa</h2>
+    </div>
+    <div class="container left-align">
+        <div class="my-3 card">
+            <h3 class="mb-0">Model 1</h3>
+            <p class="help-text my-1">This model uses all the features except for ETo.</p>
+            <div class="math">
+                <p class="my-0"><strong>Features Used:</strong> R<sub>s</sub>&nbsp;, U<sub>2</sub>&nbsp;,
+                RH<sub><em>max</em></sub>&nbsp;, RH<sub><em>min</em></sub>&nbsp;,
+                T<sub><em>max</em></sub>&nbsp;, T<sub><em>min</em></sub>&nbsp;, SWC, NDVI, NDWI, DOY</p>
+                <ul class="mb-5">
+                    <li><strong>R<sup>2</sup>:</strong>&ensp; 0.83</li>
+                    <li><strong>RMSE:</strong>&ensp; 0.40</li>
+                    <li><strong>MBE:</strong>&ensp; 0.013</li>
+                </ul>
+            </div>
+            <a href="/predict" class="btn btn--small m-5">Use this Model</a>
+        </div>
+        <div class="my-3 card">
+            <h3 class="mb-0">Model 2</h3>
+            <div class="math">
+                <p class="my-0"><strong>Features Used:</strong> R<sub>s</sub>&nbsp;, U<sub>2</sub>&nbsp;,
+                RH<sub><em>max</em></sub>&nbsp;, T<sub><em>max</em></sub>&nbsp;,
+                T<sub><em>min</em></sub>&nbsp;, SWC, NDVI, NDWI, DOY</p>
+                <ul class="mb-5">
+                    <li><strong>R<sup>2</sup>:</strong>&ensp; 0.84</li>
+                    <li><strong>RMSE:</strong>&ensp; 0.39</li>
+                    <li><strong>MBE:</strong>&ensp; 0.011</li>
+                </ul>
+            </div>
+            <a href="/predict" class="btn btn--small m-5">Use this Model</a>
+        </div>
+        <div class="my-3 card">
+            <h3 class="mb-0">Model 3</h3>
+            <div class="math">
+                <p class="my-0"><strong>Features Used:</strong> R<sub>s</sub>&nbsp;, U<sub>2</sub>&nbsp;,
+                RH<sub><em>max</em></sub>&nbsp;, T<sub><em>max</em></sub>&nbsp;,
+                SWC, NDVI, NDWI, DOY</p>
+                <ul class="mb-5">
+                    <li><strong>R<sup>2</sup>:</strong>&ensp; 0.84</li>
+                    <li><strong>RMSE:</strong>&ensp; 0.39</li>
+                    <li><strong>MBE:</strong>&ensp; 0.009</li>
+                </ul>
+            </div>
+            <a href="/predict" class="btn btn--small m-5">Use this Model</a>
+        </div>
+        <div class="my-3 card">
+            <h3 class="mb-0">Model 4</h3>
+            <div class="math">
+                <p class="my-0"><strong>Features Used:</strong> R<sub>s</sub>&nbsp;, U<sub>2</sub>&nbsp;,
+                RH<sub><em>max</em></sub>&nbsp;, T<sub><em>max</em></sub>&nbsp;,
+                SWC, NDWI, DOY</p>
+                <ul class="mb-5">
+                    <li><strong>R<sup>2</sup>:</strong>&ensp; 0.84</li>
+                    <li><strong>RMSE:</strong>&ensp; 0.39</li>
+                    <li><strong>MBE:</strong>&ensp; 0.007</li>
+                </ul>
+            </div>
+            <a href="/predict" class="btn btn--small m-5">Use this Model</a>
+        </div>
+        <div class="my-3 card">
+            <h3 class="mb-0">Model 8</h3>
+            <p class="help-text my-1">This model use only variables from weather station</p>
+            <div class="math">
+                <p class="my-0"><strong>Features Used:</strong> R<sub>s</sub>&nbsp;, U<sub>2</sub>&nbsp;,
+                RH<sub><em>min</em></sub>&nbsp;, RH<sub><em>max</em></sub>&nbsp;,
+                T<sub><em>min</em></sub>&nbsp;, T<sub><em>max</em></sub></p>
+                <ul class="mb-5">
+                    <li><strong>R<sup>2</sup>:</strong>&ensp; 0.72</li>
+                    <li><strong>RMSE:</strong>&ensp; 0.52</li>
+                    <li><strong>MBE:</strong>&ensp; 0.004</li>
+                </ul>
+            </div>
+            <a href="/predict" class="btn btn--small m-5">Use this Model</a>
+        </div>
+        <div class="my-3 card">
+            <h3 class="mb-0">Model 9</h3>
+            <p class="help-text my-1">This model do not use weather variables, but consider ETo, the most important
+                feature overall.</p>
+            <div class="math">
+                <p class="my-0"><strong>Features Used:</strong> ETo, SWC, NDVI, NDWI, DOY</p>
+                <ul class="mb-5">
+                    <li><strong>R<sup>2</sup>:</strong> &ensp;0.80</li>
+                    <li><strong>RMSE:</strong> &ensp;0.42</li>
+                    <li><strong>MBE:</strong> &ensp;-0.003</li>
+                </ul>
+            </div>
+            <a href="/predict" class="btn btn--small m-5">Use this Model</a>
+        </div>
+        <div class="my-3 card">
+            <h3 class="mb-0">Model 12</h3>
+            <p class="help-text my-1">This model do not use weather variables, but consider R<sub>s</sub>, the most
+                important weather variable.</p>
+            <div class="math">
+                <p class="my-0"><strong>Features Used:</strong> R<sub>s</sub>, NDVI, NDWI, DOY</p>
+                <ul class="mb-5">
+                    <li><strong>R<sup>2</sup>:</strong> &ensp;0.76</li>
+                    <li><strong>RMSE:</strong> &ensp;0.48</li>
+                    <li><strong>MBE:</strong> &ensp;0.005</li>
+                </ul>
+            </div>
+            <a href="/predict" class="btn btn--small m-5">Use this Model</a>
+        </div>
+    </div>
+
+{% endblock %}
+```

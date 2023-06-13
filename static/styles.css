@@ -1,0 +1,268 @@
+
+html {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+.m-3 {
+    margin: 1rem !important;
+}
+
+.m-5 {
+    margin: 2rem !important;
+}
+
+.mx-5 {
+    margin-left: 2rem !important;
+    margin-right: 2rem !important;
+}
+
+.my-0 {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.my-1 {
+    margin-top: 0.1rem !important;
+    margin-bottom: 0.1rem !important;
+}
+
+.my-2 {
+    margin-top: 0.5rem !important;
+    margin-bottom: 0.5rem !important;
+}
+
+.my-3 {
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+}
+
+.my-5 {
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
+}
+
+.mb-0 {
+    margin-bottom: 0 !important;
+}
+
+.mb-5 {
+    margin-bottom: 2rem !important;
+}
+
+.center {
+    text-align: center;
+    width: 100%;
+}
+
+.left-align {
+    align-items: flex-start !important;
+    text-align: left;
+}
+
+h1, h2, h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #222;
+}
+
+p, a {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: #222;
+    line-height: 1.5rem;
+}
+
+a {
+    text-decoration: None;
+}
+
+.lead {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    font-style: italic;
+    padding: 5px;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container--flex {
+    display: flex;
+    flex-direction: row;
+}
+
+.header {
+    width: 100%;
+    justify-content: space-between;
+    background-color: aliceblue;
+    padding: 10px;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar li {
+    margin: 0 10px;
+}
+
+.site-title {
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 1rem;
+    font-weight: bold;
+}
+
+.fa-lemon {
+    position: relative;
+    top: 3px;
+}
+
+.paper {
+    max-width: 50rem;
+    margin: 2em;
+}
+
+.paper-title {
+    padding: 10px;
+    color: cornflowerblue;
+}
+
+.hero {
+    width: 100%;
+    height: 30vh;
+    background-color: cornflowerblue;
+}
+
+/* BUTTONS */
+.btn {
+    min-width: 100px;
+    background-color: #0d5cec;
+    color: white;
+    border: none;
+    padding: 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.1s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #90b2f1;
+}
+
+.btn--small {
+    padding: 12px;
+}
+
+.btn--secondary {
+    background-color: #e5e7eb;
+    color: #222;
+}
+
+/* FORMS */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 450px;
+    margin: 0 auto;
+    border: 1px solid #e5e7eb;
+    border-radius: 15px;
+    padding: 0 100px;
+}
+
+form label {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    margin-top: 1em;
+    line-height: 1.5rem;
+}
+
+form input[type="text"] {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0.5em;
+    margin-top: 0.5rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(54, 54, 54, 0.1);
+}
+
+.help-text {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.8em;
+    font-size: 0.8em;
+    color: #6c757d;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+}
+
+.input-group input[type="text"] {
+    flex-grow: 1;
+}
+
+.input-unit {
+    margin-top: 0.5em;
+    margin-left: 0.5em;
+    font-size: 0.8em;
+    color: #6c757d;
+}
+
+.form-selector > select {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0.75em;
+    margin-top: 0.5rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(54, 54, 54, 0.1);
+}
+
+/* CARDS */
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 2rem;
+    width: 40rem;
+    background-color: #fff;
+    border: 1px solid #ebecf1;
+    border-radius: 10px;
+    box-shadow: 0 1px 4px rgba(54, 54, 54, 0.1);
+    transition: box-shadow 0.1s ease-in-out;
+}
+
+/* MATH ENVIRONMENT */
+.math {
+    font-family: "Cambria Math", serif;
+}
+
+.math > p {
+    font-family: "Cambria Math", serif;
+}
