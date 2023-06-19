@@ -1,7 +1,7 @@
 # Agro Predictor
 ## Machine-Learning Models to predict Actual Evapotranspiration
 
-In order to run locally, open the terminal and run the following commands:
+In order to run locally, open the terminal inside project directory and run the following commands:
 
 ```bash
 git clone https://github.com/fedesss98/agro-predictor.git
@@ -10,4 +10,4 @@ pip install -r requirements.txt
 python app.py
 ```
 
-Then, open your browser and go to http://
+Then, open your browser and go to http://127.0.0.1:5000
