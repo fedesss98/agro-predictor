@@ -40,11 +40,8 @@ def form():
         # Rescale data
         prediction = scale_data(prediction, 'out')
 
-        # Render template with prediction
-        return render_template('form.html',)  # pass as argument: prediction=prediction
-    else:
-        # Render template without prediction
-        return render_template('form.html')
+    # Render template with prediction
+    return render_template('form.html',)  # pass as argument: prediction=prediction
 
 
 if __name__ == '__main__':

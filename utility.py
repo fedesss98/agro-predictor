@@ -37,9 +37,7 @@ MODELS_FEATURES = {
 def retrieve_data(form):
     # Create a new dictionary with the column names and data
     data = {key: [float(value)] for key, value in form.items()}
-    # Create a DataFrame from the data
-    df = pd.DataFrame(data)
-    return df
+    return pd.DataFrame(data)
 
 
 def choose_model(data):
@@ -47,8 +45,7 @@ def choose_model(data):
     features = data.columns.tolist()
     # Use features to filter the correct model
     model_name = MODELS_FEATURES[tuple(features)]
-    model = load(f'models/{model_name}.joblib')
-    return model
+    return load(f'models/{model_name}.joblib')
 
 
 def scale_data(data, direction):
